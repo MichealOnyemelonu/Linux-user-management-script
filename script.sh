@@ -49,3 +49,17 @@ echo "Usage:"
 echo " $0 create <username> [group]"
 echo " $0 delete <username>"
 fi
+
+# create a new folder
+mkdir -p /home/$USERNAME
+chown $USERNAME:$GROUP /home/$USERNAME
+chmod 700 /home/$USERNAME
+
+# create a new file
+touch /home/$USERNAME/$USERNAME.txt
+chown $USERNAME:$GROUP /home/$USERNAME/$USERNAME.txt
+chmod 600 /home/$USERNAME/$USERNAME.txt
+
+# create a new file
+touch /home/$USERNAME/$USERNAME.txt
+chown $USERNAME:$GROUP /home/$USERNAME/$USERNAME.txt
